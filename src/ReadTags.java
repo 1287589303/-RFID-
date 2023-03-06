@@ -68,7 +68,7 @@ public class ReadTags {
             // Connect reader through hostname or IP address
             reader.connect(hostname+".local");
             // Load settings
-            reader.applySettings(Settings.load("ReadTags/settings.json"));
+            reader.applySettings(Settings.load("src/settings.json"));
             // Set data format
             reader.setTagReportListener(new TagReportListenerImplementation());
             // Measure start time

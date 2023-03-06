@@ -44,17 +44,17 @@ public class ReaderSettings {
         r.setIncludePhaseAngle(true);
         r.setMode(ReportMode.Individual);
         settings.setReport(r);
-        // Select a subset of tags in the environment.
+        // Select a subset of tags in the environment.speedwayr-10-74-87
         TagFilter t1 = settings.getFilters().getTagFilter1();
         t1.setBitCount(32);
         t1.setBitPointer(32);
         t1.setMemoryBank(MemoryBank.Epc);
         t1.setFilterOp(TagFilterOp.Match);
         // If the first 32 bits of a tag's ID matches "20210414", it will reply to the reader.
-        t1.setTagMask("20210414");
+        t1.setTagMask("20230223");
         settings.getFilters().setMode(TagFilterMode.OnlyFilter1);
         try {
-            settings.save("ReadTags/settings.json");
+            settings.save("src/settings.json");
         } catch (IOException e) {
             e.printStackTrace();
         }
